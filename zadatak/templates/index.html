@@ -1,0 +1,20 @@
+{%extends 'base.html' %}
+
+{%block content %}
+	<div id="url-one">
+		<h3> New rss feed</h3>
+		<form id="url" name="url" action="url2" method="POST">
+			{% csrf_token %}
+			<input type="text" id="url" name="url"/>
+			<input id="btn1" class="button" name="btn1" type="submit" value="Submit" />
+		</form>
+	</div>
+	<div id="url-two">
+		<h3>All rss feeds</h3>
+		<form id="urls" name="urls" action="url3" method="POST">
+			{% csrf_token %}
+			
+			<input id="btn2" class="button" name="btn2" type="submit" value="Send" />
+		</form>
+	</div>
+{%endblock%}
